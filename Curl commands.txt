@@ -1,0 +1,31 @@
+List of possible commands and paths:
+
+Create player: 
+curl -s -d <player name> localhost:3000/new-player
+
+Ready:
+curl -s -X PATCH localhost:3000/jimmy/ready
+
+Start game: 
+curl -s localhost:3000/<player name>/start
+
+Move: 
+curl -s -X PATCH -d <room name> localhost:3000/<player name>/move
+
+Check window status: 
+curl -s localhost:3000/<player name>/windows
+
+Check door status: 
+curl -s localhost:3000/<player name>/doors
+
+Check room for danger:
+curl -s localhost3000/<player name>/room
+
+Lock window: 
+curl -s -X PATCH -d <window name> localhost:3000/<player name>/windows
+
+Lock door: 
+curl -s -X PATCH -d <door name> localhost:3000/<player name>/doors
+
+Remove danger:
+curl -s -X PATCH localhost:3000/<player name>/room
